@@ -1,14 +1,86 @@
-{% extends 'base.html' %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title> RSA Development & Projects Page </title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/navbars/">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto+Mono&display=swap" rel="stylesheet">
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="css/navbar.css" rel="stylesheet">
+  </head>
+  <body>
+    
+<main>
+ 
 
 
 
-{% block content %}
-    {% block titulo %}
-        
-        <button class="btn-primary"><h3>{{ titulo }}</h3></button>
-        <hr>
+  <nav class="navbar navbar-expand-lg  navbar navbar-dark bg-primary" aria-label="Ninth navbar example">
+    <div class="container-xl">
+      <a class="navbar-brand" href="index.html">RSA</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07XL" aria-controls="navbarsExample07XL" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    {% endblock %}
+      <div class="collapse navbar-collapse" id="navbarsExample07XL">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="sobre.html">Sobre</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="contato.html">Contato</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle nav-link active" href="#" id="dropdown07XL" data-bs-toggle="dropdown" aria-expanded="false">Projetos</a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown07XL">
+              <li><a class="dropdown-item" href="#">#1 Gerador de Nomes de Bandas</a></li>
+              <li><a class="dropdown-item" href="#">#2 Rachando a conta entre amigos</a></li>
+              <li><a class="dropdown-item" href="#">Ilha do Tesouro</a></li>
+            </ul>
+          </li>
+        </ul>
+
+
+       
+      </div>
+    </div>
+  </nav>
+
+
+   
+</main>
+
+<div class="container">
 
 	<div class="container">
 		
@@ -49,48 +121,4 @@
 				<input type="email" id="email" class="form-control" placeholder="Informe seu email" />
             </div>
 
-            <div>
-                <h4>Mensagem</h4>
-				<textarea id="message" class="form-control" placeholder="Digite sua mensagem"></textarea>
-            </div>
-			<br>
-				
-			<div class="submit-button-wrapper">
-				<input type="submit" value="Enviar" id="submit-button" />
-			</div>
-
-		</form>
-	</div>
-		
-	
-
-	<script>
-		let submitButton = document.querySelector('#submit-button');
-		function emailValidate(email) {
-			return email.includes('@');
-}
-
-		function clickListener(event) {
-			event.preventDefault();
-			let emailInput = document.querySelector('#email');
-			let messageInput = document.querySelector('#message');
-			let emailText = emailInput.value;
-			let messageText = messageInput.value;
-
-			if(emailValidate(emailText) !== true) {
-				console.log('The email address must contain @');
-				return false;
-	}
-			console.log('Thanks for your message');
-}
-			submitButton.addEventListener('click', clickListener);
-
-
-	</script>
-
-
-
-
-
-
-{% endblock %}
+          
