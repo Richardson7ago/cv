@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+    {% block titulo %}
+        
+        <button class="btn-primary"><h3>{{ titulo }}</h3></button>
+        <hr>
+
+    {% endblock %}
+
+	<div class="container">
+		
+
+		<p><h4>Telefone</h4> +55 61 9 9844-1039</p>
+
+		<p><h4>Email</h4> richardson7ago@gmail.com</p>
+
+		
+	</div>
+   
+
+   
+    
+
+<div class="container">
+    <h4>Links</h4>
+        <ul>
+            <li>
+                <a href="https://github.com/">Github</a>
+			</li>
+
+            <li>
+                <a href="https://twitter.com/">Twitter</a>
+			</li>
+            
+            <li>
+                <a href="https://linkedin.com">Linkedin</a>
+			</li>
+
+		</ul>
+			
+
+			
+		<form action="#">
+            <div>
+                <h4>Email</h4>
+				<input type="email" id="email" class="form-control" placeholder="Informe seu email" />
+            </div>
+
+            <div>
+                <h4>Mensagem</h4>
+				<textarea id="message" class="form-control" placeholder="Digite sua mensagem"></textarea>
+            </div>
+			<br>
+				
+			<div class="submit-button-wrapper">
+				<input type="submit" value="Enviar" id="submit-button" />
+			</div>
+
+		</form>
+	</div>
+		
+	
+
+	<script>
+		let submitButton = document.querySelector('#submit-button');
+		function emailValidate(email) {
+			return email.includes('@');
+}
+
+		function clickListener(event) {
+			event.preventDefault();
+			let emailInput = document.querySelector('#email');
+			let messageInput = document.querySelector('#message');
+			let emailText = emailInput.value;
+			let messageText = messageInput.value;
+
+			if(emailValidate(emailText) !== true) {
+				console.log('The email address must contain @');
+				return false;
+	}
+			console.log('Thanks for your message');
+}
+			submitButton.addEventListener('click', clickListener);
+
+
+	</script>
+
+
+
+
+
+
+{% endblock %}
