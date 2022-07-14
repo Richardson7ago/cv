@@ -1,203 +1,96 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title> RSA Development & Projects Page </title>
 
-<!--ABERTURA DA TAG HTML-->
-<html>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/navbars/">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto+Mono&display=swap" rel="stylesheet">
 
-	<!--ABERTURA DA TAG HEAD-->
-	<head>
-
-		<!--ABERTURA DA TAG TITLE-->
-		<title> Richardson's Personal Page</title>
-
-		<!--ENCODE UTF-8-->
-		<meta charset="utf-8">
-
-		<!-- CSS only BOOTSTRAP-->
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-		<!--CONFIGURAÇÃO DE RESPONSIVIDADE-->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-		<!--LINK PARA CSS-->
-		<link rel="stylesheet" href="css/styles.css">
-
-	<!--FECHAMENTO DA TAG HEAD-->
-	</head>
-	
-	<style>
-		/*CONFIGURAÇÕES DA IMAGEM*/
-
-  img{
-
-    height: 200px;
-    width: 200px;
-    cursor: pointer;
     
 
-  }
+    <!-- Bootstrap core CSS -->
+<link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
 
-/*CONFIGURAÇÕES DA TAG <HR>*/
-  h1, h2, h4 {
-    cursor: pointer;
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
 
-  }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
 
-/*CONFIGURAÇÕES DO BODY*/
+    
+    <!-- Custom styles for this template -->
+    <link href="css/navbar.css" rel="stylesheet">
+  </head>
+  <body>
+    
+<main>
+ 
 
-  body{
-      background-color: #A3E4DB;
-      color: #1C6DD0;
 
-      margin-bottom: 30px;
-      margin-left: 30px;
-      margin-right: 30px;
-      margin-top: 30px;
 
-  }
+  <nav class="navbar navbar-expand-lg  navbar navbar-dark bg-primary" aria-label="Ninth navbar example">
+    <div class="container-xl">
+      <a class="navbar-brand" href="index.html">RSA</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07XL" aria-controls="navbarsExample07XL" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-hr{
+      <div class="collapse navbar-collapse" id="navbarsExample07XL">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="sobre.html">Sobre</a>
+          </li>
 
-  width: 50%;
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="contato.html">Contato</a>
+          </li>
 
-}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle nav-link active" href="#" id="dropdown07XL" data-bs-toggle="dropdown" aria-expanded="false">Projetos</a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown07XL">
+              <li><a class="dropdown-item" href="#">#1 Gerador de Nomes de Bandas</a></li>
+              <li><a class="dropdown-item" href="#">#2 Rachando a conta entre amigos</a></li>
+              <li><a class="dropdown-item" href="#">Ilha do Tesouro</a></li>
+            </ul>
+          </li>
+        </ul>
 
-ul{
-  list-style-type: none;
+
+       
+      </div>
+    </div>
+  </nav>
+
+
+   
+</main>
+
+<div class="container">
   
-  
-}
-
-a{
- text-decoration: none;
- cursor: pointer; 
-}
-		
-	</style>
-
-	<!--ABERTURA DA TAG BODY-->
-	<body>
-		<!--ABERTURA DA TAG TABLE-->
-		<table>
-			<!--PRIMEIRA LINHA DA TABELA-->
-			<tr>
-				<!--IMAGEM DO CANDIDATO-->
-				<td>
-					<img src="imagens/richardson.png" alt="foto de perfil">
-				</td>
-			</tr>
-
-			<!--SEGUNDA LINHA DA TABELA-->
-			<tr>
-
-				<td>
-				<!--NOME DO CANDIDATO-->
-				<h1>Richardson Almeida 🔧</h1>
-				</td>
-			</tr>
-
-			<!--TERCEIRA LINHA DA TABELA-->
-			<tr>
-
-				<td>
-					<!--TÍTULO DO CANDIDATO-->
-					<h4>Desenvolvedor Python - PHP - NodeJS </h4>
-				</td>
-			</tr>
-
-			<!--QUARTA LINHA DA TABELA-->
-			<tr>
-				<td>
-					<!--CIDADE E PAÍS DO CANDIDATO-->
-					<h4>Brasília, Brasil</h4>
-				</td>
-			</tr>
-			<!--FECHAMENTO DA TAG TABLE-->
-		</table>
-		<hr>
-		
-		<!--INFORMAÇÕES SOBRE O CANDIDATO-->
-		<h2>Sobre</h2>
-		<hr>
-		<p>Tenho 41 anos de idade, gosto de trabalhar em equipe, focado nos objetivos organizacionais. </p>
-		<p>No desenvolvimento de minhas atividades, busco integrar experiências de trabalho e pesquisa acadêmica, a fim de identificar problemas, criar modelos de solução, 
-		   escolher a opção mais adequada e implementá-la. </p>
-		<p>Possuo afinidade com as linguagens de programação <strong>Python, PHP, NodeJS</strong> e seus frameworks. </p>
-		<p>Devido a imensa quantidade de tecnologias disponíveis e particularidades de cada empresa, cultivo o aprendizado de novas 
-			tecnologias mediante o estudo de documentação e cursos específicos. 
-		</p>
 
 
-		<hr>
-		<!--FORMAÇÃO DO CANDIDATO-->
-		<h2>Formação</h2>
-		<hr>
-
-			<ul>
-				<li>👨‍🎓 Gestão de Recursos Humanos</li>
-				<li>👨‍🎓 Análise e Desenvolvimento de Sistemas</li>
-				<li>👨‍🎓 Especialização em Docência na Educação Profissional, Técnica e Tecnológica</li>
-				<li>👨‍🎓 Formação Técnica em Desenvolvimento de Sistemas para Internet</li>
-			</ul>
+</div>
 
 
 
-		<hr>
-		<!--HABILIDADES DO CANDIDATO-->
-		<h2>Competências</h2>
-		<hr>
 
-			<ul>
-				<li>🎯 Projeto, desenvolvimento, implantação e manutenção de sistemas informatizados</li>
-				<li>🎯 Dimensionamento de requisitos e funcionalidades de sistemas de informação</li>
-				<li>🎯 Administração de ambientes informatizados</li>
-				<li>🎯 Especificação de arquiteturas e ferramentas de desenvolvimento de sistemas</li>
-				<li>🎯 Aplicação de recursos computacionais (hardware e software)</li>
-				<li>🎯 Produção de software</li>
-				<li>🎯 Suporte Técnico</li>
-				<li>🎯 Gestão de contratos de prestação de serviços de tecnologia da informação</li>
-				<li>🎯 Documentação de software</li>
-			
-			</ul>
+    <script src="js/bootstrap.bundle.min.js"></script>
 
-
-		<hr>
-		<!-- IDIOMAS QUE O CANDIDATO FALA -->
-		<h2>Idiomas</h2>
-		<hr>
-
-			<ul>
-				<li>💬 Audição e leitura avançadas em Inglês</li>
-				<li>💬 Audição e leitura intermediárias em Espanhol</li>
-			</ul>
-
-
-
-		<hr>
-		<!--PROJETOS DESENVOLVIDOS PELO CANDIDATO-->
-		<h2>Projetos</h2>
-		<hr>
-
-			<ul>
-				<li><a href="http://grazystoree.epizy.com/">🎗️ Modelo Estático de Loja de Roupas</a></li>
-				<li><a href="https://github.com/Richardson7ago">🎗️ Repositórios GitHub</a></li>
-				<li><a href="https://replit.com/@Richardson/caca-ao-tesouro">🎗️ Um Simples Jogo no repositório Replit</a></li>
-			</ul>
-
-
-		<hr>
-		<!--CONTATOS DO CANDIDATO-->
-		<h2>Contato</h2>
-		<hr>
-			<ul>
-				<li>🤝 richardson7ago@gmail.com</li>
-				<li>🤝 https://www.linkedin.com/in/richardson-almeida-78ab2b34/</li>
-				<li>🤝 55 61 99844-1039</li>
-				<li>🤝 WhatsApp 61 99877-2339</li>
-			</ul>
-
-	<!--FECHAMENTO DA TAG BODY-->
-	</body>
-
-
-<!--FECHAMENTO DA TAG HTML-->
+      
+  </body>
 </html>
